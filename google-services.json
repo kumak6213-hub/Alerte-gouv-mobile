@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "867392593389",
+    "project_id": "alerte-gouv",
+    "storage_bucket": "alerte-gouv.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867392593389:android:6eff3930b8dcfdcd459be4",
+        "android_client_info": {
+          "package_name": "com.hk6.alertgouv"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3dBjZTdHjwAn0O1c6154l5NpU7kIDy4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
