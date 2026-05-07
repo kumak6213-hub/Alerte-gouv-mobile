@@ -1,13 +1,4 @@
 {
-  "build": {
-    "preview": {
-      "android": {
-        "buildType": "apk"
-      }
-    }
-  }
-}
-{
   "cli": {
     "version": ">= 3.13.0"
   },
