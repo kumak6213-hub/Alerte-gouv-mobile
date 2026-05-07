@@ -4,6 +4,9 @@
     "slug": "alerte-gouv",
     "version": "1.0.0",
     "orientation": "portrait",
+    "splash": {
+      "backgroundColor": "#ffffff"
+    },
     "android": {
       "package": "com.hk6.alertegouv"
     },
