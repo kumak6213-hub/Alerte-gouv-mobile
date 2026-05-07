@@ -1,15 +1,24 @@
 {
   "expo": {
     "name": "Alerte gouv",
-    "slug": "alerte-gouv",
+    "slug": "alerte-gouv", 
     "version": "1.0.0",
     "orientation": "portrait",
     "splash": {
       "backgroundColor": "#ffffff"
     },
     "android": {
-      "package": "com.hk6.alertegouv"
+      "package": "com.hk6.alertegouv",
+      "googleServicesFile": "./google-services.json"
     },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "color": "#ffffff"
+        }
+      ]
+    ],
     "extra": {
       "eas": {
         "projectId": "02f79585-f9da-4939-abcc-fd4365952e2a"
