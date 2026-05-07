@@ -20,19 +20,25 @@ export default function App() {
   }, []);
 
   async function registerForPushNotificationsAsync() {
-    if (!Device.isDevice) {
-      return 'ERREUR: Utilise un vrai téléphone';
-    }
+    try {
+      if (!Device.isDevice) {
+        return 'ERREUR: Pas un vrai téléphone';
+      }
 
-    const { status } = await Notifications.requestPermissionsAsync();
-    if (status !== 'granted') {
-      return 'ERREUR: Permission refusée';
-    }
+      const { status } = await Notifications.requestPermissionsAsync();
+      if (status !== 'granted') {
+        return 'ERREUR: Permission refusée';
+      }
 
-    const projectId = Constants.expoConfig.extra.eas.projectId;
-    const token = (await Notifications.getExpoPushTokenAsync({ projectId })).data;
-    
-    return token;
+      const projectId = Constants.expoConfig.extra.eas.projectId;
+      console.log('Project ID:', projectId);
+      
+      const token = (await Notifications.getExpoPushTokenAsync({ projectId })).data;
+      return token;
+      
+    } catch (error) {
+      return 'ERREUR: ' + error.message;
+    }
   }
 
   return (
@@ -41,7 +47,7 @@ export default function App() {
         Alerte Gouv Test
       </Text>
       <Text selectable style={{ fontSize: 12, textAlign: 'center' }}>
-        Token: {expoPushToken}
+        {expoPushToken}
       </Text>
     </View>
   );
