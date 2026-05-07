@@ -5,8 +5,11 @@
     "version": "1.0.0",
     "android": {
       "package": "com.hk6.alertegouv"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "02f79585-f9da-4939-abcc-fd4365952e2a"
+      }
     }
   }
 }
-
-02f79585-f9da-4939-abcc-fd4365952e2a
