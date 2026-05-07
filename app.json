@@ -8,7 +8,7 @@
       "backgroundColor": "#ffffff"
     },
     "android": {
-      "package": "com.hk6.alertegouv",
+      "package": "com.hk6.alertgouv",
       "googleServicesFile": "./google-services.json"
     },
     "plugins": [
