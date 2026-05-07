@@ -1,17 +1,26 @@
 {
   "expo": {
-    "name": "Alerte Gouv",
+    "name": "Alerte gouv",
     "slug": "alerte-gouv",
     "version": "1.0.0",
     "orientation": "portrait",
-    "android": {
-      "package": "com.housca.alertegouv",
-      "versionCode": 1
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
     },
-    "extra": {
-      "eas": {
-        "projectId": "02f79585-f9da-4939-abcc-fd4365952e2a"
+    "android": {
+      "package": "com.hk6.alertegouv",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
       }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
     }
   }
 }
