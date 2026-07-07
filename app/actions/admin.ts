@@ -21,7 +21,10 @@ export async function setCampaignStatusAction(campaignId: string, status: Campai
 }
 
 export async function setUserRoleAction(userId: string, role: "user" | "admin"): Promise<void> {
-  await requireAdmin()
+  const self = await requireAdmin()
+  if (self.id === userId && role !== "admin") {
+    throw new Error("Vous ne pouvez pas révoquer votre propre rôle d'administrateur.")
+  }
   const store = getStore()
   const user = store.users.find((u) => u.id === userId)
   if (user) user.role = role
